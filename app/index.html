@@ -5,13 +5,302 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dreams</title>
+    <link rel="shortcut icon" href="images/logo-head.png" type="image/png">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <header class="header">
     <div class="container">
-        
+        <div class="header__top">
+            <ul class="social">
+                <li class="social__item">
+                    <a class="social__link" href="#">
+                        <svg class="social__icon">
+                            <use xlink:href="images/sprite.svg#facebook"></use>
+                        </svg>
+                        <span class="visually-hidden">
+                            When you click on the icon, you will go to the Facebook page
+                        </span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="#">
+                        <svg class="social__icon">
+                            <use xlink:href="images/sprite.svg#pinterest"></use>
+                        </svg>
+                        <span class="visually-hidden">
+                            When you click on the icon, you will go to the pinterest page
+                        </span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="#">
+                        <svg class="social__icon">
+                            <use xlink:href="images/sprite.svg#insta"></use>
+                        </svg>
+                        <span class="visually-hidden">
+                            When you click on the icon, you will go to the Instagram page
+                        </span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="#">
+                        <svg class="social__icon">
+                            <use xlink:href="images/sprite.svg#twitter"></use>
+                        </svg>
+                        <span class="visually-hidden">
+                            When you click on the icon, you will go to the Twitter page
+                        </span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="#">
+                        <svg class="social__icon">
+                            <use xlink:href="images/sprite.svg#vk"></use>
+                        </svg>
+                        <span class="visually-hidden">
+                            When you click on the icon, you will go to the vk page
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <a class="header__link-map" href="#">
+                <svg class="header__icon">
+                    <use xlink:href="images/sprite.svg#map"></use>
+                </svg>
+                <span class="visually-hidden">
+                    When you click on the icon, you will go to the page with the map of our location
+                </span>
+                <p class="header__text">
+                    1835 73rd Ave NE, Medina, Washington, USA.
+                </p>
+            </a>
+            <ul class="header__register">
+                <li class="header__item">
+                    <a class="header__link" href="#">Login</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__link" href="#">Register</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header__bottom">
+            <a class="header__logo" href="#">
+                <img class="header__images" width="168" height="59" src="images/logo.png" alt="logo">
+            </a>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Tours</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Package</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Blog</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </header>
-    
+    <section class="home-page" style="background-image: url(images/home-page-bg.jpg);">
+    <div class="container">
+        <div class="home-page__inner">
+            <a class="home-page__phone" href="tel:+91254587485">+91 254 587 485</a>
+            <h1 class="home-page__title">Book a Ticket & Just Leave!</h1>
+            <div class="home-page__text">
+                <p>
+                    Travel is the movement of people between relatively distant geographical locations, and can involve travel by foot,bicycle, automobile, train, boat, bus.
+                </p>
+            </div>
+            <a class="home-page__link" href="#">
+                <svg class="home-page__icon">
+                    <use xlink:href="images/sprite.svg#long-arrow-right"></use>
+                </svg>
+                Get ticket
+                <span class="visually-hidden">
+                    when you click on the icon, you will be taken to the page where you can buy a ticket
+                </span>
+            </a>
+        </div>
+    </div>
+</section>
+    <section class="reservation">
+    <h2 class="visually-hidden">
+        Booking tickets
+    </h2>
+    <div class="container">
+        <ul class="reservation__buttons">
+            <li class="reservation__item">
+                <button class="reservation__btn" type="button" data-filter=".hotel">Hotel</button>
+            </li>
+            <li class="reservation__item">
+                <button class="reservation__btn" type="button" data-filter=".tours">Tours</button>
+            </li>
+            <li class="reservation__item">
+                <button class="reservation__btn" type="button" data-filter=".package">Package</button>
+            </li>
+        </ul>
+        <div class="reservation__inner">
+
+            <form class="reservation__list mix hotel" action="#">
+                <div class="reservation__items">
+                    <label class="reservation__label" for="location">where?</label>
+                    <input class="reservation__input" type="text" name="location" id="location" placeholder="Choose location" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="city">which?</label>
+                    <input class="reservation__input" type="text" name="city" id="city" placeholder="Choose City" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="check-in">Check in</label>
+                    <input  class="reservation__input reservation__input--datepicker1" type="text" name="check-in" id="check-in" placeholder="yy-dd-mm" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="check-out">Check out</label>
+                    <input class="reservation__input reservation__input--datepicker2" type="text" name="check-out" id="check-out" placeholder="yy-dd-mm" required>
+                </div>
+                <button class="reservation__button" type="submit">Search</button>
+            </form>
+            <form class="reservation__list mix tours" action="#">
+                <div class="reservation__items">
+                    <label class="reservation__label" for="location">where?</label>
+                    <input class="reservation__input" type="text" name="location" id="location" placeholder="Choose location" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="city">which?</label>
+                    <input class="reservation__input" type="text" name="city" id="city" placeholder="Choose City" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="check-in">Check in</label>
+                    <input  class="reservation__input reservation__input--datepicker1" type="text" name="check-in" id="check-in" placeholder="yy-dd-mm" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="check-out">Check out</label>
+                    <input class="reservation__input reservation__input--datepicker2" type="text" name="check-out" id="check-out" placeholder="yy-dd-mm" required>
+                </div>
+                <button class="reservation__button" type="submit">Search</button>
+            </form>
+            <form class="reservation__list mix package" action="#">
+                <div class="reservation__items">
+                    <label class="reservation__label" for="location">where?</label>
+                    <input class="reservation__input" type="text" name="location" id="location" placeholder="Choose location" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="city">which?</label>
+                    <input class="reservation__input" type="text" name="city" id="city" placeholder="Choose City" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="check-in">Check in</label>
+                    <input  class="reservation__input reservation__input--datepicker1" type="text" name="check-in" id="check-in" placeholder="yy-dd-mm" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="check-out">Check out</label>
+                    <input class="reservation__input reservation__input--datepicker2" type="text" name="check-out" id="check-out" placeholder="yy-dd-mm" required>
+                </div>
+                <button class="reservation__button" type="submit">Search</button>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+
+    <section class="packages">
+    <div class="container">
+        <span class="packages__subtitle">Popular Tour Packages</span>
+        <h2 class="packages__title">Populer place</h2>
+        <ul class="place-slider">
+            <li class="place-slider__item">
+                <img class="place-slider__images" src="images/place-slider-1.jpg" alt="Photo England">
+                <div class="place-slider__info">
+                    <span class="place-slider__price">$670 2 days 2 night</span>
+                    <span class="place-slider__place">Mancity, England</span>
+                    <a class="place-slider__link" href="#">
+                        <svg class="place-slider__icon">
+                            <use xlink:href="images/sprite.svg#arrow-down"></use>
+                        </svg>
+                        <span class="visually-hidden">
+                            <!-- When you click on the icon, you will go to the pinterest page -->
+                        </span>
+                    </a>
+                </div>
+            </li>
+            <li class="place-slider__item">
+                <img class="place-slider__images" src="images/place-slider-3.jpg" alt="Photo England">
+                <div class="place-slider__info">
+                    <span class="place-slider__price">$670 2 days 2 night</span>
+                    <span class="place-slider__place">Mancity, England</span>
+                    <a class="place-slider__link" href="#">
+                        <svg class="place-slider__icon">
+                            <use xlink:href="images/sprite.svg#arrow-down"></use>
+                        </svg>
+                        <span class="visually-hidden">
+                            <!-- When you click on the icon, you will go to the pinterest page -->
+                        </span>
+                    </a>
+                </div>
+            </li>
+            <li class="place-slider__item">
+                <img class="place-slider__images" src="images/place-slider-2.jpg" alt="Photo England">
+                <div class="place-slider__info">
+                    <span class="place-slider__price">$670 2 days 2 night</span>
+                    <span class="place-slider__place">Mancity, England</span>
+                    <a class="place-slider__link" href="#">
+                        <svg class="place-slider__icon">
+                            <use xlink:href="images/sprite.svg#arrow-down"></use>
+                        </svg>
+                        <span class="visually-hidden">
+                            <!-- When you click on the icon, you will go to the pinterest page -->
+                        </span>
+                    </a>
+                </div>
+            </li>
+            <li class="place-slider__item">
+                <img class="place-slider__images" src="images/place-slider-1.jpg" alt="Photo England">
+                <div class="place-slider__info">
+                    <span class="place-slider__price">$670 2 days 2 night</span>
+                    <span class="place-slider__place">Mancity, England</span>
+                    <a class="place-slider__link" href="#">
+                        <svg class="place-slider__icon">
+                            <use xlink:href="images/sprite.svg#arrow-down"></use>
+                        </svg>
+                        <span class="visually-hidden">
+                            <!-- When you click on the icon, you will go to the pinterest page -->
+                        </span>
+                    </a>
+                </div>
+            </li>
+            <li class="place-slider__item">
+                <img class="place-slider__images" src="images/place-slider-2.jpg" alt="Photo England">
+                <div class="place-slider__info">
+                    <span class="place-slider__price">$670 2 days 2 night</span>
+                    <span class="place-slider__place">Mancity, England</span>
+                    <a class="place-slider__link" href="#">
+                        <svg class="place-slider__icon">
+                            <use xlink:href="images/sprite.svg#arrow-down"></use>
+                        </svg>
+                        <span class="visually-hidden">
+                            <!-- When you click on the icon, you will go to the pinterest page -->
+                        </span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+
+
+
+    <script src="js/main.min.js"></script>
 </body>
 </html>

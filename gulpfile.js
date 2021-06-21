@@ -85,6 +85,7 @@ function scripts () {
         'node_modules/rateyo/src/jquery.rateyo.js',
         'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
         'node_modules/wow.js/dist/wow.js',
+        'node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))

@@ -19,11 +19,12 @@ body {
 }
 
 body {
-    // font-family: $Rubik;
-    // font-weight: $fw400;
+    font-family: $OpenSans;
+    font-weight: $fw400;
     font-size: 16px;
     background-color: #fff;
-    // color: $global;
+    line-height: 1.5;
+    color: $global;
     display: flex;
     flex-direction: column;
     // @include max($lg) {
@@ -36,8 +37,5 @@ body {
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
-    // @include max($s) {
-    //     padding: 0 10px;
-    // }
 }
 

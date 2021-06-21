@@ -1,0 +1,112 @@
+.packages {
+
+    &__subtitle {
+        margin-bottom: 18px;
+        font-size: 14px;
+        color: $gold;
+        font-weight: $fw600;
+        text-transform: uppercase;
+        display: block;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__title {
+        text-transform: uppercase;
+        color: $darkGrey;
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 70px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+}
+
+.place-slider {
+    display: flex !important;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+    height: 460px;
+    &__item {
+        position: relative;
+        max-width: 370px;
+        height: 370px;
+        width: 100%;
+        flex-grow: 1;
+        transition: transform 0.3s ease-in;
+        &:hover .place-slider__info{
+            background-color: rgba($gold, 0.6);
+            padding-top: 40px;
+        }
+        &:hover .place-slider__price{
+            opacity: 1;
+        }
+        &:hover .place-slider__link {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__images {
+        object-fit: cover;
+    }
+    &__info {
+        position: absolute;
+        padding-top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        text-align: center;
+        background-color: rgba(#fff, 0.6);
+        font-weight: $fw600;
+        color: $darkGrey;
+        transition: background-color 0.3s ease-in, padding-top 0.3s ease-in;
+    }
+    &__price {
+        display: block;
+        transition: opacity 0.3s ease-in;
+        opacity: 0;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__place {
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+        font-size: 20px;
+        display: block;
+        padding: 20px 0;
+    }
+    &__link {
+        display: inline-block;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        margin: 0 auto -28px;
+        background-color: $gold;
+        transition: opacity 0.4s ease-in;
+        opacity: 0;
+        visibility: hidden;
+        outline: none;
+        transition: background-color 0.3s ease-in;
+        &:hover {
+            background-color: $darkGrey;
+        }
+        &:focus {
+            background-color: $fff01;
+        }
+        &:active {
+            background-color: $global;
+        }
+    }
+    &__icon {
+        margin: auto;
+        width: 30px;
+        height: 30px;
+        fill: #fff;
+    }
+    & .slick-dots {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+    }
+}
