@@ -1,0 +1,63 @@
+.honeymoon {
+    margin-bottom: 100px;
+}
+
+.honeymoon-slider {
+    
+    &__items {
+        max-width: 620px;
+        width: 100%;
+        box-shadow: 0px 0px 35px 0px rgba(186, 197, 198, 0.25);
+        display: flex;
+        justify-content: space-between;
+        padding-right: 25px;
+        padding-top: 50px;
+    }
+    &__photo {
+        position: relative;
+        max-width: 370px;
+        width: 100%;
+        height: 307px;
+    }
+    &__images {
+        object-fit: cover;
+    }
+    &__list {
+        position: absolute;
+        bottom: 0; 
+        right: 0;
+        display: flex;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 2px;
+        }
+    }
+    &__link {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 30px;
+        height: 30px;
+        border-radius: 2px;
+
+
+    }
+    &__icon {
+        width: 12px;
+        height: 12px;
+        fill: #fff;
+        margin: auto;
+    }
+    &__info {
+        max-width: 190px;
+        width: 100%;
+    }
+
+
+
+    &__details {
+        // width: 100%;
+        display: inline-block;
+    }
+}
+

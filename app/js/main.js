@@ -26,6 +26,13 @@ $(function(){
         slidesToScroll: 1
     });
 
+    $('.packages-destinations__slider').slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev"><svg class="packages-destinations__arrow"><use xlink:href="images/sprite.svg#chevron-left"></use></svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg class="packages-destinations__arrow"><use xlink:href="images/sprite.svg#chevron-right"></use></svg></button>'
+    });
 
 
     var mixer = mixitup('.reservation__inner');
