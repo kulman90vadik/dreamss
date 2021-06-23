@@ -1,0 +1,27 @@
+.social {
+    display: flex;
+    align-items: center;
+    &__item {
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+    &__link {
+        outline: transparent;
+        &:focus .social__icon {
+            fill: $gold;
+        }
+        &:active .social__icon {
+            fill: $global;
+        }
+    }
+    &__icon {
+        width: 16px;
+        height: 16px;
+        fill: #fff;
+        transition: fill 0.3s ease;
+        &:hover {
+            fill: rgba(#fff, 0.7);
+        }
+    }
+}

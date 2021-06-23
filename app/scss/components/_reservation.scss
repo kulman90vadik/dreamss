@@ -1,0 +1,116 @@
+.reservation {
+    margin-bottom: 110px;
+    margin-top: -45px;
+    &__buttons {
+        display: flex;
+        border-left: 25px solid $gold;
+        margin-bottom: 3px;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 2px;
+        }
+    }
+    &__btn {
+        border: none;
+        text-transform: uppercase;
+        outline: transparent;
+        background-color: #fff;
+        font-size: 14px;
+        color: $darkGrey;
+        padding: 12px 22px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in, color 0.3s ease-in;
+        &:hover {
+            background-color: $darkGrey;
+            color: #fff;
+        }
+        &:focus {
+            background-color: $global;
+            color: #fff;
+        }
+        &:active {
+            background-color: $gold;
+            color: $darkGrey;
+        }
+        &.mixitup-control-active {
+            background-color: $gold;
+            color: #fff;
+        }
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        border-left: 25px solid $gold;
+        background-color: $fff01;
+        padding: 55px 100px 55px 40px;
+        position: relative;
+        justify-content: space-between;
+    }
+    &__items {
+        max-width: 190px;
+        width: 100%;
+        font-size: 14px;
+    }
+    &__label {
+        text-transform: uppercase;
+        display: block;
+        color: $global;
+        margin-bottom: 7px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__input {
+        border: none;
+        height: 50px;
+        padding: 0 10px 0 30px;
+        outline: transparent;
+        transition: background-color 0.3s ease-in;
+        &::placeholder {
+            color: $darkGrey;
+            transition: color 0.3s ease-in;
+        }
+        &:focus {
+            background-color: $global;
+            &::placeholder {
+                color: #fff;
+            }
+        }
+        &--datepicker1,
+        &--datepicker2{
+            &::placeholder {
+                text-transform: uppercase;
+            }
+        }
+    }
+    &__button {
+        transform: rotate(90deg);
+        position: absolute;
+        right: -34px;
+        height: 40px;
+        width: 110px;
+        border: none;
+        padding: 0;
+        text-transform: uppercase;
+        background-color: $gold;
+        font-size: 13px;
+        color: #fff;
+        font-weight: $fw600;
+        outline: transparent;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in, color 0.3s ease-in;
+        &:hover {
+            background-color: $darkGrey;
+            color: #fff;
+        }
+        &:focus {
+            background-color: $global;
+            color: #fff;
+        }
+        &:active {
+            background-color: $gold;
+            color: $darkGrey;
+        }
+    }
+}
+

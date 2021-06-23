@@ -1,0 +1,187 @@
+.discount {
+    margin-bottom: 100px;
+    text-align: center;
+    &__text {
+        max-width: 740px;
+        font-size: 15px;
+    }
+    &__link {
+        border-color: $gold;
+        margin-bottom: 60px;
+        &:hover {
+            color: $global;
+            border-color: $global;
+        }
+        &:hover .icon{
+            fill: $global;
+        }
+    }
+}
+
+.discount-clock {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+    &__inner {
+        max-width: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+        &--gold {
+            color: $gold;
+        }
+        &--red {
+            color: #ef6f6c;
+        }
+        &--green {
+            color: #28c190;
+        }
+        &--black {
+            color: $darkGrey;
+        }
+    }
+    &__number {
+        font-size: 50px;
+        font-weight: $fw700;
+        line-height: 1;
+    }
+    & .smalltext {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: $fw600;
+    }
+}
+
+.feedback {
+    height: 460px;
+    padding-top: 65px;
+    margin-bottom: 165px;
+    @include bg;
+    position: relative;
+    &__title {
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 30px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__subtitle {
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        margin-bottom: 25px;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+    }
+    &__inner {
+        max-width: 480px;
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+    }
+    &__input {
+        width: 100%;
+        height: 50px;
+        outline: transparent;
+        border: none;
+        padding: 0 91px 0 25px;
+        border-radius: 3px;
+        transition: background-color 0.3s ease;
+        &::placeholder {
+            color: #cecfd1;
+        }
+        &:focus {
+            background-color: $global;
+        }
+    }
+    &__btn {
+        cursor: pointer;
+        position: absolute;
+        height: 50px;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: #1b2739;
+        font-size: 14px;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 0 15px;
+        outline: transparent;
+        border: none;
+        z-index: 2;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        &:hover {
+            color: $gold;
+            background-color: $darkGrey;
+        }
+        &:focus {
+            color: $gold;
+            background-color: $global;
+        }
+        &:active {
+            color: #fff;
+            background-color: $darkGrey;
+        }
+    }
+    &__popup {
+        @include bg;
+        position: absolute;
+        max-width: 630px;
+        width: 100%;
+        height: 330px;
+        margin: 0 auto;
+        display: block;
+        bottom:  -165px;
+        left: 0;
+        right: 0;
+        &:hover .feedback__icon{
+            fill: $gold;
+        }
+        &:hover .feedback__play {
+            background-color: $darkGrey;
+        }
+        &:hover .feedback__text {
+            color: $gold;
+        }
+    }
+    &__holder {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        bottom: 30px;
+        left: 30px;
+    }
+    &__play {
+        width: 27px;
+        height: 27px;
+        border: none;
+        border-radius: 50%;
+        background-color: #fff;
+        padding: 0;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        margin-right: 20px;
+        transition: background-color 0.3s ease;
+    }
+    &__icon {
+        margin: auto;
+        fill: #1b2739;
+        width: 13px;
+        height: 13px;
+        transition: fill 0.3s ease;
+    }
+    &__text {
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: $fw600;
+        transition: color 0.3s ease;
+    }
+}
+
+
+

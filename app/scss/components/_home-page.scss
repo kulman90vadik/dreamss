@@ -1,0 +1,44 @@
+.home-page {
+    height: 100vh;
+    background-color: #000;
+    @include bg;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+    }
+    &__phone {
+        font-weight: $fw700;
+        font-size: 20px;
+        margin-bottom: 16px;
+        color: $gold;
+        outline: transparent;
+        transition: color 0.3s ease;
+        &:hover {
+            color: #fff;
+        }
+        &:focus {
+            color: $global;
+        }
+        &:active {
+            color: rgba(#fff, 0.7);
+        }
+    }
+    &__title {
+        font-weight: $fw700;
+        font-size: 48px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    &__text {
+        margin-bottom: 25px;
+        color: #fff;
+        max-width: 645px;
+        p {
+            @include lineClamp;
+            -webkit-line-clamp: 2;
+        }
+    }
+}
