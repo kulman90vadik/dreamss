@@ -1,0 +1,81 @@
+.best-packages {
+    min-height: 700px;
+    @include bg;
+    margin-bottom: 100px;
+    &__inner {
+        min-height: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    &__content {
+        max-width: 440px;
+        width: 100%;
+    }
+    &__number {
+        font-size: 40px;
+        font-weight: $fw700;
+        color: $darkGrey;
+        position: relative;
+        &::after {
+            content: '%';
+            position: absolute;
+            top: 8px;
+            right: -20px;
+            font-size: 16px;
+        }
+    }
+    &__subtitle {
+        text-transform: uppercase;
+        color: $gold;
+        font-weight: $fw700;
+    }
+    &__title {
+        font-size: 38px;
+        margin-bottom: 35px;
+        font-weight: $fw700;
+        color: $darkGrey;
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+    }
+    &__text {
+        font-size: 15px;
+        margin-bottom: 35px;
+        color: $global;
+        p {
+            @include lineClamp;
+            -webkit-line-clamp: 3;
+        }
+    }
+    &__link {
+        display: inline-block;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: $fw700;
+        border-radius: 3px;
+        background-color: $gold;
+        padding: 10px 20px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+        &:hover {
+            background-color: $global;
+            color: $gold;
+        }
+        &:focus {
+            color: $global;
+            background-color: $gold;
+        }
+        &:active {
+            background-color: $darkGrey;;
+            color: #fff;
+        }
+    }
+    &__images {
+        @include bg;
+        min-height: 400px;
+        max-width: 600px;
+        width: 100%;
+    }
+}

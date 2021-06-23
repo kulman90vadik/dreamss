@@ -1,17 +1,23 @@
 .honeymoon {
-    margin-bottom: 100px;
+    margin-bottom: 150px;
 }
 
 .honeymoon-slider {
-    
-    &__items {
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto;
+    &__holder {
         max-width: 620px;
         width: 100%;
-        box-shadow: 0px 0px 35px 0px rgba(186, 197, 198, 0.25);
+        border: 1px solid $fff01;
         display: flex;
         justify-content: space-between;
         padding-right: 25px;
         padding-top: 50px;
+        &:hover .honeymoon-slider__details{
+            background-color: $gold;
+            color:#fff;
+        }
     }
     &__photo {
         position: relative;
@@ -39,25 +45,158 @@
         width: 30px;
         height: 30px;
         border-radius: 2px;
-
-
+        outline: transparent;
+        transition: background-color 0.3s ease-in;
+        &:hover {
+            background-color: $gold;
+        }
+        &:hover .honeymoon-slider__icon{
+            fill: $darkGrey;
+        }
+        &:focus {
+            background-color: $darkGrey;
+        }
+        &:focus .honeymoon-slider__icon{
+            fill: $gold;
+        }
+        &:active {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        &:active .honeymoon-slider__icon{
+            fill: $gold;
+        }
     }
     &__icon {
         width: 12px;
         height: 12px;
         fill: #fff;
         margin: auto;
+        transition: fill 0.3s ease-in;
     }
     &__info {
         max-width: 190px;
         width: 100%;
+        display: flex;
+        flex-direction: column;
     }
-
-
-
+    &__subtitle {
+        font-size: 24px;
+        color: $darkGrey;
+        margin-bottom: 12px;
+        padding-top: 5px;
+        font-weight: $fw600;
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+    }
+    &__price {
+        color: $gold;
+        font-size: 24px;
+        display: block;
+        font-weight: $fw700;
+        margin-bottom: 15px;
+        display: block;
+    }
+    &__time {
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+        line-height: 1.3;
+        margin-bottom: 10px;
+        padding-left: 30px;
+        position: relative;
+        color: $darkGrey;
+        display: block;
+        margin-bottom: 20px;
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            width: 16px;
+            height: 16px;
+            background-image: url(../images/icons/clock.svg);
+            @include bg;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__text {
+        font-size: 15px;
+        color: $global;
+        margin-bottom: 15px;
+        display: block;
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+    }
+    &__star {
+        padding: 0;
+        margin-bottom: 10px;
+    }
     &__details {
-        // width: 100%;
+        padding: 15px 5px;
+        font-weight: $fw600;
+        text-transform: uppercase;
+        margin-top: auto;
+        color: $gold;
         display: inline-block;
+        text-align: center;
+        outline: transparent;
+        transition: background-color 0.3s ease-in, color 0.3s ease-in;
+        &:focus {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: $gold;
+        }
+        &:active {
+            background-color: $darkGrey;
+            color: #fff;
+        }
+    }
+    & .slick-dots {
+        position: absolute;
+        bottom: -40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        left: 0;
+        right: 0;
+        li {
+            width: 15px;
+            height: 15px;
+            display: flex;
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+            &.slick-active {
+                button {
+                    width: 15px;
+                    height: 15px;
+                    background-color: $gold;
+                }
+            }
+        }
+        li button {
+            padding: 0;
+            margin: auto;
+            border: 1px solid $gold;
+            cursor: pointer;
+            font-size: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            outline: none;
+            background-color: #fff;
+            transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+            &:hover {
+                background-color: $gold;
+            }
+            &:focus {
+                background-color: $global;
+                border-color: $global;
+            }
+            &:active {
+                background-color: $darkGrey;
+                border-color: $darkGrey;
+            }
+        }
     }
 }
 
