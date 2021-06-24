@@ -37,7 +37,7 @@
         font-weight: $fw600;
         margin-bottom: 15px;
     }
-    &__title,
+    &__title-link,
     &__person {
         transition: color 0.3s ease-in-out;
         outline: transparent;
@@ -52,16 +52,16 @@
         }
     }
     &__title {
+        margin-bottom: 15px;
+    }
+    &__title-link {
         @include lineClamp;
         -webkit-line-clamp: 2;
         font-size: 20px;
         line-height: 1.8;
         color: $darkGrey;
-        display: block;
-        margin-bottom: 15px;
-        transition: color 0.3s ease-in-out;
-        outline: transparent;
     }
+
     &__text {
         font-family: 15px;
         color: $global;
