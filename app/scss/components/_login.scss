@@ -1,0 +1,157 @@
+.login {
+    display: none;
+    background-color: $gold;
+    &__form {
+        max-width: 470px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    &__label {
+        font-size: 14px;
+        margin-bottom: 11px;
+        pointer-events: none;
+    }
+    &__input {
+        height: 58px;
+        border: 1px solid #f6f6f6;
+        display: block;
+        outline: transparent;
+        padding: 0 10px;
+        &--email {
+            margin-bottom: 28px;
+        }
+        &--password {
+            margin-bottom: 38px;
+        }
+        &:focus {
+            border-color: $darkGrey;
+        }
+    }
+    &__btn {
+        background-color: $darkGrey;
+        height: 60px;
+        border: none;
+        color: #fff;
+        padding: 0;
+        outline: transparent;
+        font-size: 18px;
+        margin-bottom: 33px;
+        font-weight: $fw400;
+        cursor: pointer;
+        transition: background-color .3s ease-in;
+        &:hover {
+            background-color: $global;
+        }
+        &:focus {
+            background-color: #fff;
+            color: $gold;
+        }
+        &:active {
+            background-color: $darkGrey;
+        }
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #f6f6f6;
+        margin-bottom: 30px;
+        @include max($s) {
+            flex-direction: column;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+        }
+    }
+    &__checkbox {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        transition: color .3s;
+        margin-right: 4px;
+        &:hover {
+            color: #fff;
+        }
+        &:active {
+            color: $gold;
+        }
+        &:hover .login__checked{
+            border-color: $global;
+        }
+        
+    }
+    &__check {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        position: absolute;
+        &:checked + .login__checked {
+            background-image: url(../images/icons/check.svg);
+            @include bg;
+            background-size: auto;
+            border-color: #666;
+        }
+    }
+    &__checked {
+        position: absolute;
+        border: 1px solid transparent;
+        width: 14px;
+        height: 14px;
+        border-radius: 2px;
+        background-color: #ebebeb;
+        left: 0;
+        top: 50%;
+        transform: translateY(-56%);
+        transition: border-color .3s;
+    }
+    &__link {
+        margin-right: 4px;
+        color: #0d0d0e;
+        outline: transparent;
+        transition: color 0.3s ease-in;
+        &:hover {
+            color: #fff;
+        }
+        &:focus {
+            color: $global;
+        }
+        &:active {
+            color: $darkGrey;
+        }
+    }
+    &__registered {
+        font-size: 18px;
+        font-weight: $fw400;
+        color: $global;
+        border: 2px solid $darkGrey;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: transparent;
+        transition: background-color .3s ease-in, color .3s ease-in, border-color .3s ease-in;
+        &:hover {
+            background-color: $global;
+            color: #fff;
+            border-color: $global;
+        }
+        &:focus {
+            background-color: #fff;
+            color: $gold;
+            border-color: $gold;
+        }
+        &:active {
+            background-color: $darkGrey;
+            color: #000;
+            border-color: $darkGrey;
+        }
+    }
+    @include max($sm) {
+        padding: 32px 23px 20px;
+    }
+}
+

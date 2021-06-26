@@ -1,12 +1,38 @@
+
+
+
 .header {
     position: absolute;
     top: 0;
     width: 100%;
+    transition: background-color 0.3s ease-in;
+    &--active {
+        position: fixed;
+        z-index: 200;
+        background-color: rgba(#000, 0.9);
+    }
     &__top {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 15px 0;
+        @include max($lg) {
+            padding: 5px 0;
+        }
+    }
+    &__logo {
+        transition: height 0.3s ease-in, width 0.3s ease-in;
+        &--small {
+            width: 100px;
+            height: 35px;
+        }
+        @include max($lg) {
+            width: 100px;
+            height: 35px;
+        }
+    }
+    &__top--hidden {
+        display: none;
     }
     &__link-map {
         display: flex;
@@ -32,6 +58,12 @@
         &:active .header__text {
             color: $global;
         }
+        @include max($md) {
+            margin-right: 10px;
+        }
+        @include max($s) {
+            margin-right: 7px;
+        }
     }
     &__icon {
         width: 11px;
@@ -39,6 +71,9 @@
         fill: #fff;
         margin-right: 15px;
         transition: fill 0.3s ease-in;
+        @include max($s) {
+            margin-right: 0;
+        }
     }
     &__text {
         transition: color 0.3s ease-in;
@@ -46,6 +81,9 @@
         color: #fff;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($md) {
+            display: none;
+        }
     }
     &__register {
         display: flex;
@@ -60,6 +98,11 @@
             padding-right: 13px;
             border-right: 1px solid $gold;
             margin-right: 12px;
+            @include max($s) {
+                padding-right: 0;
+                border-right: none;
+                margin-right: 7px;
+            }
         }
     }
     &__link {
@@ -80,32 +123,123 @@
         align-items: center;
         justify-content: space-between;
         padding: 15px 0;
+        transition: padding 0.3s ease-in;
+        &--active {
+            padding: 6px 0;
+        }
+        @include max($lg) {
+            padding: 6px 0;
+        }
+        // @include max($md) {
+        //     padding: 0;
+        // }
     }
+
+
+
+    &__btn {
+        display: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        padding: 0;
+        border: none;
+        outline: transparent;
+        background-color: $gold;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        @include max($md) {
+            display: flex;
+            position: relative;
+            z-index: 205;
+        }
+    }
+    &__btn-line {
+        width: 24px;
+        height: 4px;
+        border-radius: 3px;
+        display: block;
+        background-color: #fff;
+        transition: transform 0.3s ease-in;
+        &:nth-child(2) {
+            margin: 4px 0;
+        }
+    }
+    &__btn-line--active {
+        &:nth-child(1) {
+            transform: rotate(-45deg);
+            transform-origin: 63%;
+        }
+        &:nth-child(2) {
+            display: none;
+        }
+        &:nth-child(3) {
+            transform: rotate(47deg);
+            transform-origin: 57%;
+        }
+
+    }
+
+
 }
 
 .menu {
+    transition: transform 0.4s ease-in;
     &__list {
         display: flex;
+        @include max($md) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
     }
     &__item {
         &:not(:last-child) {
             margin-right: 40px;
+            @include max($md) {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+        @include max($md) {
+            width: 100%;
+            text-align: center;
         }
     }
     &__link {
         text-transform: uppercase;
         color: #fff;
         font-size: 14px;
+        outline: transparent;
         transition: color 0.3s ease-in;
         &:hover {
             color: $gold;
         }
         &:focus {
-            color: $global;
+            color: rgb(211, 47, 47);
         }
         &:active {
             color: rgba(#fff, 0.7);
         }
-
+        @include max($md) {
+            padding: 5px 0;
+            display: block;
+        }
+    }
+    @include max($md) {
+        transform: translateX(-140%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 201;
+    }
+    &--active {
+        transform: translateX(0);
     }
 }

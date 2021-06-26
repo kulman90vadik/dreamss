@@ -20,10 +20,15 @@
             color: #fff;
         }
         &:focus {
-            color: $global;
+            color: rgb(211, 47, 47);
         }
         &:active {
             color: rgba(#fff, 0.7);
+        }
+        @include max($md) {
+            font-size: 16px;
+            margin-top: 30px;
+            margin-bottom: 6px;
         }
     }
     &__title {
@@ -31,6 +36,17 @@
         font-size: 48px;
         color: #fff;
         margin-bottom: 20px;
+        @include max($lg) {
+            font-size: 34px;
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+        @include max($md) {
+            font-size: 25px;
+        }
+        @include max($s) {
+            font-size: 21px;
+        }
     }
     &__text {
         margin-bottom: 25px;
@@ -39,6 +55,9 @@
         p {
             @include lineClamp;
             -webkit-line-clamp: 2;
+        }
+        @include max($md) {
+            margin-bottom: 10px;
         }
     }
 }

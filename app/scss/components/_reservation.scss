@@ -1,10 +1,12 @@
 .reservation {
-    margin-bottom: 110px;
     margin-top: -45px;
     &__buttons {
         display: flex;
         border-left: 25px solid $gold;
         margin-bottom: 3px;
+        @include max($s) {
+            border-width: 10px;
+        }
     }
     &__item {
         &:not(:last-child) {
@@ -37,6 +39,9 @@
             background-color: $gold;
             color: #fff;
         }
+        @include max($s) {
+            padding: 5px 18px;
+        }
     }
     &__list {
         display: flex;
@@ -46,11 +51,30 @@
         padding: 55px 100px 55px 40px;
         position: relative;
         justify-content: space-between;
+        @include max($xl) {
+            padding: 55px 70px 55px 25px;
+        }
+        @include max($lg) {
+            flex-wrap: wrap;
+            padding: 20px 70px 20px 25px;
+        }
+        @include max($s) {
+            border-width: 10px;
+            padding: 20px 55px 20px 15px;
+        }
     }
     &__items {
         max-width: 190px;
         width: 100%;
         font-size: 14px;
+        @include max($lg) {
+            margin-bottom: 15px;
+            max-width: 45%;
+        }
+        @include max($md) {
+            margin-bottom: 10px;
+            max-width: 100%;
+        }
     }
     &__label {
         text-transform: uppercase;
@@ -82,6 +106,9 @@
                 text-transform: uppercase;
             }
         }
+        @include max($lg) {
+            width: 100%;
+        }
     }
     &__button {
         transform: rotate(90deg);
@@ -111,6 +138,9 @@
             background-color: $gold;
             color: $darkGrey;
         }
+    }
+    @include max($s) {
+        margin-top: -34px;
     }
 }
 

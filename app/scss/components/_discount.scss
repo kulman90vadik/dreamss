@@ -15,6 +15,15 @@
         &:hover .icon{
             fill: $global;
         }
+        @include max($lg) {
+            margin-bottom: 30px;
+        }
+    }
+    @include max($lg) {
+        margin-bottom: 175px;
+    }
+    @include max($md) {
+        margin-bottom: 100px;
     }
 }
 
@@ -30,6 +39,10 @@
         justify-content: center;
         &:not(:last-child) {
             margin-right: 20px;
+            @include max($sm) {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
         }
         &--gold {
             color: $gold;
@@ -43,6 +56,9 @@
         &--black {
             color: $darkGrey;
         }
+        @include max($sm) {
+            max-width: 100%;
+        }
     }
     &__number {
         font-size: 50px;
@@ -53,6 +69,10 @@
         font-size: 18px;
         text-transform: uppercase;
         font-weight: $fw600;
+    }
+    @include max($sm) {
+        flex-direction: column;
+        flex-wrap: wrap;
     }
 }
 
@@ -68,6 +88,9 @@
         margin-bottom: 30px;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($md) {
+            margin-bottom: 5px;
+        }
     }
     &__subtitle {
         color: #fff;
@@ -76,12 +99,20 @@
         margin-bottom: 25px;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($sm) {
+            -webkit-line-clamp: 2;
+            letter-spacing: 1px;
+        }
     }
     &__inner {
         max-width: 480px;
         width: 100%;
         position: relative;
         margin: 0 auto;
+        @include max($sm) {
+            position: static;
+
+        }
     }
     &__input {
         width: 100%;
@@ -96,6 +127,10 @@
         }
         &:focus {
             background-color: $global;
+        }
+        @include max($sm) {
+            margin-bottom: 10px;
+            padding: 0 25px;
         }
     }
     &__btn {
@@ -126,6 +161,10 @@
             color: #fff;
             background-color: $darkGrey;
         }
+        @include max($sm) {
+            position: static;
+            width: 100%;
+        }
     }
     &__popup {
         @include bg;
@@ -146,6 +185,18 @@
         }
         &:hover .feedback__text {
             color: $gold;
+        }
+        @include max($lg) {
+            height: 290px;
+            bottom: -130px;
+        }
+        @include max($md) {
+            max-width: 90%;
+            height: 231px;
+            bottom:  -65px;
+        }
+        @include max($sm) {
+            height: 180px;
         }
     }
     &__holder {
@@ -180,6 +231,18 @@
         color: #fff;
         font-weight: $fw600;
         transition: color 0.3s ease;
+    }
+    @include max($lg) {
+        height: 380px;
+        padding-top: 25px;
+    }
+    @include max($md) {
+        height: 370px;
+        margin-bottom: 100px;
+    }
+    @include max($sm) {
+        padding: 25px 10px 0;
+        // height: 395px;
     }
 }
 

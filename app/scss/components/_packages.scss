@@ -1,5 +1,5 @@
 .packages {
-
+    padding-top: 60px;
     &__subtitle {
         margin-bottom: 18px;
         font-size: 14px;
@@ -18,14 +18,20 @@
         margin-bottom: 70px;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($lg) {
+            margin-bottom: 25px;
+        }
+        @include max($md) {
+            font-size: 23px;
+        }
     }
 }
 
 .place-slider {
     display: flex !important;
     max-width: 1130px;
+    width: 100%;
     margin: 0 auto 100px;
-    padding-bottom: 50px;
     height: 460px;
     &__item {
         position: relative;
@@ -43,6 +49,18 @@
         &:hover .place-slider__link {
             opacity: 1;
             visibility: visible;
+        }
+        @include max($lg) {
+            max-width: 330px;
+            height: 330px;
+        }
+        @include max($md) {
+            max-width: 370px;
+            height: 370px;
+        }
+        @include max($s) {
+            max-width: 270px;
+            height: 270px;
         }
     }
     &__images {
@@ -73,6 +91,9 @@
         font-size: 20px;
         display: block;
         padding: 20px 0;
+        @include max($s) {
+            padding: 10px 0;
+        }
     }
     &__link {
         display: inline-block;
@@ -152,10 +173,27 @@
             }
         }
     }
+    @include max($xl) {
+        width: 756px;
+    }
+    @include max($lg) {
+        height: 370px;
+        width: 670px;
+        margin: 0 auto 60px;
+    }
+    @include max($md) {
+        height: 435px;
+        width: 370px;
+    }
+    @include max($s) {
+        height: 330px;
+        margin: 0 auto 15px;
+        width: 270px;
+    }
 }
 
 .packages-destinations {
-    padding-top: 30px;
+    padding-top: 40px;
     margin-bottom: 100px;
     background-repeat: no-repeat;
     background-position: center top;
@@ -164,6 +202,12 @@
         height: 580px;
         @include bg;
         position: relative;
+        @include max($lg) {
+            height: 350px;
+        }
+        @include max($md) {
+            height: 300px;
+        }
     }
     &__content {
         position: absolute;
@@ -180,6 +224,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include max($lg) {
+            max-width: 370px;
+        }
+        @include max($md) {
+            max-width: 315px;
+            padding: 10px;
+        }
+        @include max($sm) {
+            max-width: 270px;
+        }
     }
     &__name {
         color: $darkGrey;
@@ -188,6 +242,10 @@
         margin-bottom: 21px;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($sm) {
+            margin-bottom: 9px;
+            font-size: 19px;
+        }
     }
     &__list {
         display: flex;
@@ -243,9 +301,15 @@
     }
     & .slick-prev {
         left: 100px;
+        @include max($md) {
+            left: 15px;
+        }
     }
     & .slick-next {
         right: 100px;
+        @include max($md) {
+            right: 15px;
+        }
     }
     &__arrow {
         width: 17px;
@@ -307,5 +371,14 @@
                 border-color: $darkGrey;
             }
         }
+    }
+    @include max($xl) {
+        background-size: 95%;
+    }
+    @include max($md) {
+        padding-top: 48px;
+    }
+    @include max($sm) {
+        background-image: none;
     }
 }

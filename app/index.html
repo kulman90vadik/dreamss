@@ -8,12 +8,12 @@
     <link rel="shortcut icon" href="images/logo-head.png" type="image/png">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
+<body id="home">
     <header class="header">
     <div class="container">
         <div class="header__top">
             <ul class="social">
-                <li class="social__item">
+                <li class="social__item wow animate__animated animate__fadeInLeft"  data-wow-duration="2s" data-wow-delay="1s">
                     <a class="social__link" href="#">
                         <svg class="social__icon">
                             <use xlink:href="images/sprite.svg#facebook"></use>
@@ -23,7 +23,7 @@
                         </span>
                     </a>
                 </li>
-                <li class="social__item">
+                <li class="social__item animate__animated animate__fadeInLeft wow"  data-wow-duration="2s" data-wow-delay="1.5s">
                     <a class="social__link" href="#">
                         <svg class="social__icon">
                             <use xlink:href="images/sprite.svg#pinterest"></use>
@@ -33,7 +33,7 @@
                         </span>
                     </a>
                 </li>
-                <li class="social__item">
+                <li class="social__item animate__animated animate__fadeInLeft wow"  data-wow-duration="2s" data-wow-delay="2s">
                     <a class="social__link" href="#">
                         <svg class="social__icon">
                             <use xlink:href="images/sprite.svg#insta"></use>
@@ -43,7 +43,7 @@
                         </span>
                     </a>
                 </li>
-                <li class="social__item">
+                <li class="social__item animate__animated animate__fadeInLeft wow"  data-wow-duration="2s" data-wow-delay="2.5s">
                     <a class="social__link" href="#">
                         <svg class="social__icon">
                             <use xlink:href="images/sprite.svg#twitter"></use>
@@ -53,7 +53,7 @@
                         </span>
                     </a>
                 </li>
-                <li class="social__item">
+                <li class="social__item animate__animated animate__fadeInLeft wow"  data-wow-duration="2s" data-wow-delay="3s">
                     <a class="social__link" href="#">
                         <svg class="social__icon">
                             <use xlink:href="images/sprite.svg#vk"></use>
@@ -77,36 +77,44 @@
             </a>
             <ul class="header__register">
                 <li class="header__item">
-                    <a class="header__link" href="#">Login</a>
+                    <a class="header__link" data-fancybox href="#hidden">Login</a>
                 </li>
                 <li class="header__item">
-                    <a class="header__link" href="#">Register</a>
+                    <a class="header__link" data-fancybox href="#hidden">Register</a>
                 </li>
             </ul>
         </div>
         <div class="header__bottom">
-            <a class="logo" href="#">
-                <img class="logo__images" width="168" height="59" src="images/logo.png" alt="logo">
+            <a class="header__logo logo" href="#home">
+                <img class="logo__images" src="images/logo.png" alt="logo">
             </a>
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a class="menu__link" href="#">Home</a>
+                        <a class="menu__link" href="#home">Home</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">Tours</a>
+                        <a class="menu__link" href="#tours">Tours</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">Package</a>
+                        <a class="menu__link" href="#package">Package</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">Blog</a>
+                        <a class="menu__link" href="#blog">Blog</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">Contact</a>
+                        <a class="menu__link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </nav>
+            <button class="header__btn" type="button">
+                <span class="header__btn-line"></span>
+                <span class="header__btn-line"></span>
+                <span class="header__btn-line"></span>
+                <span class="visually-hidden">
+                    <!-- When you click on the icon, you will go to the Instagram page -->
+                </span>
+            </button>
         </div>
     </div>
 </header>
@@ -115,7 +123,7 @@
     <div class="container">
         <div class="home-page__inner">
             <a class="home-page__phone" href="tel:+91254587485">+91 254 587 485</a>
-            <h1 class="home-page__title">Book a Ticket & Just Leave!</h1>
+            <h1 class="home-page__title wow animate__fadeInUpBig" data-wow-duration="2s" data-wow-delay="2s">Book a Ticket & Just Leave!</h1>
             <div class="home-page__text">
                 <p>
                     Travel is the movement of people between relatively distant geographical locations, and can involve travel by foot,bicycle, automobile, train, boat, bus.
@@ -214,10 +222,10 @@
 </section>
 
 
-        <section class="packages">
+        <section class="packages" id="tours">
     <div class="container">
-        <span class="packages__subtitle">Popular Tour Packages</span>
-        <h2 class="packages__title">Populer place</h2>
+        <span class="packages__subtitle wow animate__fadeInLeft" data-wow-offset="20" data-wow-duration="1s">Popular Tour Packages</span>
+        <h2 class="packages__title wow animate__fadeInLeft" data-wow-duration="1.5s" data-wow-offset="20">Populer place</h2>
         <ul class="place-slider">
             <li class="place-slider__item">
                 <img class="place-slider__images" src="images/place-slider-1.jpg" alt="Photo England">
@@ -297,12 +305,12 @@
         </ul>
     </div>
 
-    <section class="packages-destinations" style="background-image: url(images/packages-destinations-bg.png);">
+    <section class="packages-destinations" id="package" style="background-image: url(images/packages-destinations-bg.png);">
         <div class="container">
-            <h2 class="title">
+            <h2 class="title wow animate__backInUp" data-wow-duration="1s" data-wow-offset="20" >
                 Most Popular Travel Destinations
             </h2>
-            <div class="text">
+            <div class="text wow animate__backInUp" data-wow-duration="1s" data-wow-offset="20" >
                 <p>
                     Love travel? Plan and book your perfect trip with expert advice, travel tips, destination information and inspiration from Lonely Planet
                 </p>
@@ -486,8 +494,8 @@
 
         <section class="honeymoon">
     <div class="container">
-        <h2 class="title">Destinations for Honeymoon</h2>
-        <div class="text">
+        <h2 class="title wow animate__backInUp" data-wow-duration="1s" data-wow-offset="20">Destinations for Honeymoon</h2>
+        <div class="text wow animate__backInUp" data-wow-duration="1s" data-wow-offset="20">
             <p>
                 Love travel? Plan and book your perfect trip with expert advice, travel tips, destination information and inspiration from Lonely Planet
             </p>
@@ -766,17 +774,17 @@
     <div class="container">
         <div class="best-packages__inner">
             <div class="best-packages__content">
-                <div class="best-packages__head">
+                <div class="best-packages__head wow animate__lightSpeedInLeft" data-wow-duration="1s" data-wow-offset="20">
                     <span class="best-packages__number">50</span>
                     <span class="best-packages__subtitle">OFF Discount 10-30% Off</span>
                 </div>
-                <h2 class="best-packages__title">Best Holiday Packages</h2>
-                <div class="best-packages__text">
+                <h2 class="best-packages__title wow animate__lightSpeedInLeft" data-wow-duration="1s" data-wow-offset="20">Best Holiday Packages</h2>
+                <div class="best-packages__text wow animate__lightSpeedInLeft" data-wow-duration="1s" data-wow-offset="20">
                     <p>
                         Find your ideal holiday package whether you're travelling in Australia or around the World. Book Flights & Accommodation packages in one place with Escape Travel.
                     </p>
                 </div>
-                <a class="best-packages__link" href="#">read more</a>
+                <a class="best-packages__link wow animate__lightSpeedInLeft" href="#" data-wow-duration="1s" data-wow-offset="20">read more</a>
             </div>
             <div class="best-packages__images" style="background-image: url(images/best-packages-images.jpg);">
                 <span class="visually-hidden">
@@ -788,8 +796,8 @@
 </section>
         <section class="discount">
     <div class="container">
-        <h2 class="title">30% Discount, stock limited</h2>
-        <div class="text discount__text">
+        <h2 class="title wow animate__backInUp" data-wow-duration="1s" data-wow-offset="20">30% Discount, stock limited</h2>
+        <div class="text discount__text wow animate__backInUp" data-wow-duration="1s" data-wow-offset="20">
             <p>
                 The world's largest student and youth travel agency. Find cheap flights, tours, Spring Break packages and exclusive travel deals for studentsTake full advantage of privileged discount rates.
             </p>
@@ -834,7 +842,7 @@
                     <button class="feedback__btn" type="submit">Submit</button>
                 </div>
             </form>
-            <a class="feedback__popup" data-fancybox href="https://www.youtube.com/watch?v=KHJPv7om_tY" style="background-image: url(images/feedback-popup.jpg);">
+            <a class="feedback__popup wow animate__fadeInUpBig" data-wow-duration="1s" data-wow-offset="120" data-fancybox href="https://www.youtube.com/watch?v=KHJPv7om_tY" style="background-image: url(images/feedback-popup.jpg);">
                 <span class="visually-hidden">
                     Video clip dedicated to the nature of Switzerland
                 </span>
@@ -854,7 +862,7 @@
     </div>
 </section>
         
-<section class="articles">
+<section class="articles" id="blog">
     <div class="container">
         <h2 class="visually-hidden">
             The main articles of our blog
@@ -1032,14 +1040,14 @@
 </section>
 
     </main>
-    <section class="footer" style="background-image: url(images/footer-bg.jpg);">
+    <section class="footer" id="contact" style="background-image: url(images/footer-bg.jpg);">
     <h2 class="visually-hidden">
         Site footer, with site navigation
     </h2>
     <div class="container">
         <ul class="footer__inner">
             <li class="footer__column footer__column--logo">
-                <a class="footer__logo logo" href="#">
+                <a class="footer__logo logo" href="#home">
                     <img class="logo__images" width="168" height="59" src="images/logo.png" alt="logo">
                 </a> 
                 <div class="footer__row">
@@ -1055,7 +1063,7 @@
                     <a class="footer__link" href="mailto:dreamland@dream.com">dreamland@dream.com</a>
                 </div>
                 <ul class="social">
-                    <li class="social__item">
+                    <li class="social__item animate__fadeInLeft wow" data-wow-duration="3s" data-wow-offset="20">
                         <a class="social__link" href="#">
                             <svg class="social__icon">
                                 <use xlink:href="images/sprite.svg#facebook"></use>
@@ -1065,7 +1073,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="social__item">
+                    <li class="social__item animate__fadeInLeft wow"  data-wow-duration="2.5s" data-wow-offset="20">
                         <a class="social__link" href="#">
                             <svg class="social__icon">
                                 <use xlink:href="images/sprite.svg#pinterest"></use>
@@ -1075,7 +1083,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="social__item">
+                    <li class="social__item animate__fadeInLeft wow"  data-wow-duration="2s" data-wow-offset="20">
                         <a class="social__link" href="#">
                             <svg class="social__icon">
                                 <use xlink:href="images/sprite.svg#insta"></use>
@@ -1085,7 +1093,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="social__item">
+                    <li class="social__item animate__fadeInLeft wow"  data-wow-duration="1.5s" data-wow-offset="20">
                         <a class="social__link" href="#">
                             <svg class="social__icon">
                                 <use xlink:href="images/sprite.svg#twitter"></use>
@@ -1095,7 +1103,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="social__item">
+                    <li class="social__item animate__fadeInLeft wow"  data-wow-duration="1s" data-wow-offset="20">
                         <a class="social__link" href="#">
                             <svg class="social__icon">
                                 <use xlink:href="images/sprite.svg#vk"></use>
@@ -1108,8 +1116,13 @@
                 </ul>
             </li>
             <li class="footer__column">
-                <h3 class="footer__column-title">Support</h3>
-                <ul class="footer__list">
+                <div class="footer__holder">
+                    <h3 class="footer__column-title">Support</h3>
+                    <svg class="footer__icon">
+                        <use xlink:href="images/sprite.svg#chevron-right"></use>
+                    </svg>
+                </div>
+                <ul class="footer__list footer__list--slide">
                     <li class="footer__item">
                         <a class="footer__link" href="#">Email Contact</a>
                     </li>
@@ -1128,8 +1141,13 @@
                 </ul>   
             </li>
             <li class="footer__column">
-                <h3 class="footer__column-title">Location</h3>
-                <ul class="footer__list">
+                <div class="footer__holder">
+                    <h3 class="footer__column-title">Location</h3>
+                    <svg class="footer__icon">
+                        <use xlink:href="images/sprite.svg#chevron-right"></use>
+                    </svg>
+                </div>
+                <ul class="footer__list footer__list--slide">
                     <li class="footer__item">
                         <a class="footer__link" href="#">London</a>
                     </li>
@@ -1148,31 +1166,34 @@
                 </ul>
             </li>
             <li class="footer__column">
-                <h3 class="footer__column-title">Menu</h3>
-                <nav class="footer__menu">
-                    <ul class="footer__list">
-                        <li class="footer__item">
-                            <a class="footer__link" href="#">Home</a>
-                        </li>
-                        <li class="footer__item">
-                            <a class="footer__link" href="#">About</a>
-                        </li>
-                        <li class="footer__item">
-                            <a class="footer__link" href="#">Tours</a>
-                        </li>
-                        <li class="footer__item">
-                            <a class="footer__link" href="#">Packages</a>
-                        </li>
-                        <li class="footer__item">
-                            <a class="footer__link" href="#">Blog</a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="footer__holder">
+                    <h3 class="footer__column-title">Menu</h3>
+                    <svg class="footer__icon">
+                        <use xlink:href="images/sprite.svg#chevron-right"></use>
+                    </svg>
+                </div>
+                <ul class="footer__list footer__list--slide">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Home</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">About</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Tours</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Packages</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Blog</a>
+                    </li>
+                </ul>
             </li>
         </ul>
         <div class="footer__bottom">
             <p class="footer__copy">&copy; 2018 Roy Design. All Rights Reserved </p>
-            <ul class="footer__list--bottom">
+            <ul class="footer__list--bottom animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
                 <li class="footer__item">
                     <a class="footer__link" href="#">About Hoststar</a>
                 </li>
@@ -1192,6 +1213,34 @@
         </div>
     </div>
 </section>
+    <div class="login" id="hidden">
+    <form class="login__form">
+        <label class="login__label" for="ru">Username or email address *</label>
+        <span class="visually-hidden">
+            text field where you need to enter your email
+        </span>
+        <input class="login__input login__input--email" id="ru" name="email" type="email" required>
+        <label class="login__label" for="password">Password *</label>
+        <span class="visually-hidden">
+            text field where you need to enter your password
+        </span>
+        <input class="login__input login__input--password" id="password" name="password" type="password" required>
+        <button class="login__btn" type="submit">Login</button>
+        <div class="login__inner">
+            <label class="login__checkbox">
+                <input class="login__check" type="checkbox" name="checkbox">
+                <span class="login__checked"></span>
+                Remember me
+                <span class="visually-hidden">
+                    a field where you need to put your consent in order to remember your data
+                </span>
+            </label>
+            <a class="login__link" href="#">Lost your password?</a>
+        </div>
+        <a class="login__registered" href="#">Create an account</a>
+    </form>    
+</div>
+
 
 
 
