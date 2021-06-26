@@ -4,17 +4,35 @@
         display: flex;
         padding: 100px 0 120px;
         border-bottom: 1px solid #bababa;
+        @include max($lg) {
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 50px 0;
+        }
+        @include max($md) {
+            padding: 55px 0 20px;
+        }
     }
     &__column {
         max-width: 20%;
         width: 100%;
         &--logo {
             max-width: 40%;
+            @include max($lg) {
+                max-width: 100%;
+            }
+        }
+        @include max($lg) {
+            max-width: 100%;
+            margin-bottom: 20px;
         }
     }
     &__logo {
         margin-bottom: 40px;
         display: block;
+        @include max($md) {
+            margin-bottom: 10px;
+        }
     }
     &__row {
         &:not(:last-child) {
@@ -22,6 +40,9 @@
         }
         &--last {
             margin-bottom: 40px;
+            @include max($md) {
+                margin-bottom: 17px;
+            }
         }
     }
     &__link,
@@ -40,8 +61,15 @@
         }
         &:active {
             color: #fff;
+        } 
+    }
+    &__list {
+        @include max($lg) {
+            display: flex;
         }
-
+        @include max($sm) {
+            display: block;
+        }
     }
     &__column-title {
         text-transform: uppercase;
@@ -59,12 +87,54 @@
             background-color: $gold;
             left: 0;
             bottom: 0;
-
+            @include max($sm) {
+                display: none;
+            }
+        }
+        @include max($lg) {
+            margin-bottom: 10px;
+        }
+        @include max($sm) {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+    &__holder {
+        pointer-events: none;
+        @include max($sm) {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid $gold;
+            margin-bottom: 15px;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+    }
+    &__icon {
+        display: none;
+        @include max($sm) {
+            display: block;
+            transition: transform 0.3s ease-in;
+            width: 22px;
+            fill: #fff;
+            transform: rotate(90deg);
+            height: 22px
+        }
+        &--active {
+            transform: rotate(-90deg);
         }
     }
     &__item {
         &:not(:last-child) {
             margin-bottom: 15px;
+            @include max($lg) {
+                margin-right: 10px;
+                margin-bottom: 0;
+            }
+            @include max($sm) {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
         }
     }
     &__bottom {
@@ -72,14 +142,33 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include max($lg) {
+            flex-direction: column;
+            padding: 20px 0;
+        }
     }
     &__list {
+        &--slide {
+            @include max($sm) {
+                display: none;
+            }
+        }
+        &--slide-active {
+            display: block;
+        }
         &--bottom {
             display: flex;
             & .footer__item {
                 &:not(:last-child) {
                     margin-right: 30px;
                     margin-bottom: 0;
+                    @include max($lg) {
+                        margin-right: 10px;
+                    }
+                    @include max($sm) {
+                        margin-right: 0;
+                        border-right: 1px solid $gold;
+                    }
                 }
             }
             & .footer__link {
@@ -95,6 +184,10 @@
                 &:active {
                     color: #fff;
                 }
+                @include max($sm) {
+                    padding: 0 5px;
+                    text-align: center;
+                }
             }
         }     
     }
@@ -102,5 +195,8 @@
         font-size: 14px;
         @include lineClamp;
         -webkit-line-clamp: 1;
+        @include max($lg) {
+            margin-bottom: 10px;
+        }
     }
 }

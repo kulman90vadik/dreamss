@@ -1,5 +1,15 @@
 $(function(){
 
+
+    
+    $('.header__btn').on('click', function(){
+        $('.menu').toggleClass('menu--active');
+        $('.header__btn-line').toggleClass('header__btn-line--active');
+        // $('.header__top').toggleClass('header__top--hidden');
+    });
+
+
+
     $('.reservation__input--datepicker1').datetimepicker({
         format:'Y.d.m',
         onShow:function( ct ){
@@ -23,7 +33,21 @@ $(function(){
         arrows: false,
         dots: true,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+            breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+            breakpoint: 720,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     $('.packages-destinations__slider').slick({
@@ -47,8 +71,20 @@ $(function(){
         slidesToScroll: 1,
         arrows: false,
         dots: true,
+        responsive: [
+            {
+            breakpoint: 720,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]    
     });
 
+    $('.footer__holder').on('click', function(){
+        $(this).children('.footer__icon').toggleClass('footer__icon--active');
+        $(this).next().slideToggle();
+    });
 
 
     function getTimeRemaining(endtime) {
@@ -93,6 +129,47 @@ $(function(){
 
     const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
     initializeClock('discount-clock', deadline);
+
+    wow = new WOW(
+        {
+            boxClass: 'wow',   
+            animateClass: 'animate__animated', 
+            offset: 0,         
+            mobile: true,     
+            live: true      
+        }
+    )
+    wow.init();
+
+    $('.menu__link, .logo').on('click', function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href');
+        var top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+
+        // !
+        $('.menu').removeClass('menu--active');
+        $('.header__btn-line').removeClass('header__btn-line--active');
+    });
+
+    $(window).scroll(function(){
+        if($(document).scrollTop() > 30) {
+            $('.header').addClass('header--active');
+            $('.header__top').addClass('header__top--hidden');
+            $('.header__bottom').addClass('header__bottom--active');
+            $('.header__logo').addClass('header__logo--small');
+
+        } else {
+            $('.header').removeClass('header--active');
+            $('.header__top').removeClass('header__top--hidden');
+            $('.header__bottom').removeClass('header__bottom--active');
+            $('.header__logo').removeClass('header__logo--small');
+
+        }
+    });
+
+
+
 
 
 

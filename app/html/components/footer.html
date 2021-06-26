@@ -1,11 +1,11 @@
-<section class="footer" style="background-image: url(images/footer-bg.jpg);">
+<section class="footer" id="contact" style="background-image: url(images/footer-bg.jpg);">
     <h2 class="visually-hidden">
         Site footer, with site navigation
     </h2>
     <div class="container">
         <ul class="footer__inner">
             <li class="footer__column footer__column--logo">
-                <a class="footer__logo logo" href="#">
+                <a class="footer__logo logo" href="#home">
                     <img class="logo__images" width="168" height="59" src="images/logo.png" alt="logo">
                 </a> 
                 <div class="footer__row">
@@ -21,7 +21,7 @@
                     <a class="footer__link" href="mailto:dreamland@dream.com">dreamland@dream.com</a>
                 </div>
                 <ul class="social">
-                    <li class="social__item">
+                    <li class="social__item animate__fadeInLeft wow" data-wow-duration="3s" data-wow-offset="20">
                         <a class="social__link" href="#">
                             <svg class="social__icon">
                                 <use xlink:href="images/sprite.svg#facebook"></use>
@@ -31,7 +31,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="social__item">
+                    <li class="social__item animate__fadeInLeft wow"  data-wow-duration="2.5s" data-wow-offset="20">
                         <a class="social__link" href="#">
                             <svg class="social__icon">
                                 <use xlink:href="images/sprite.svg#pinterest"></use>
@@ -41,7 +41,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="social__item">
+                    <li class="social__item animate__fadeInLeft wow"  data-wow-duration="2s" data-wow-offset="20">
                         <a class="social__link" href="#">
                             <svg class="social__icon">
                                 <use xlink:href="images/sprite.svg#insta"></use>
@@ -51,7 +51,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="social__item">
+                    <li class="social__item animate__fadeInLeft wow"  data-wow-duration="1.5s" data-wow-offset="20">
                         <a class="social__link" href="#">
                             <svg class="social__icon">
                                 <use xlink:href="images/sprite.svg#twitter"></use>
@@ -61,7 +61,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="social__item">
+                    <li class="social__item animate__fadeInLeft wow"  data-wow-duration="1s" data-wow-offset="20">
                         <a class="social__link" href="#">
                             <svg class="social__icon">
                                 <use xlink:href="images/sprite.svg#vk"></use>
@@ -74,8 +74,13 @@
                 </ul>
             </li>
             <li class="footer__column">
-                <h3 class="footer__column-title">Support</h3>
-                <ul class="footer__list">
+                <div class="footer__holder">
+                    <h3 class="footer__column-title">Support</h3>
+                    <svg class="footer__icon">
+                        <use xlink:href="images/sprite.svg#chevron-right"></use>
+                    </svg>
+                </div>
+                <ul class="footer__list footer__list--slide">
                     <li class="footer__item">
                         <a class="footer__link" href="#">Email Contact</a>
                     </li>
@@ -94,8 +99,13 @@
                 </ul>   
             </li>
             <li class="footer__column">
-                <h3 class="footer__column-title">Location</h3>
-                <ul class="footer__list">
+                <div class="footer__holder">
+                    <h3 class="footer__column-title">Location</h3>
+                    <svg class="footer__icon">
+                        <use xlink:href="images/sprite.svg#chevron-right"></use>
+                    </svg>
+                </div>
+                <ul class="footer__list footer__list--slide">
                     <li class="footer__item">
                         <a class="footer__link" href="#">London</a>
                     </li>
@@ -114,31 +124,34 @@
                 </ul>
             </li>
             <li class="footer__column">
-                <h3 class="footer__column-title">Menu</h3>
-                <nav class="footer__menu">
-                    <ul class="footer__list">
-                        <li class="footer__item">
-                            <a class="footer__link" href="#">Home</a>
-                        </li>
-                        <li class="footer__item">
-                            <a class="footer__link" href="#">About</a>
-                        </li>
-                        <li class="footer__item">
-                            <a class="footer__link" href="#">Tours</a>
-                        </li>
-                        <li class="footer__item">
-                            <a class="footer__link" href="#">Packages</a>
-                        </li>
-                        <li class="footer__item">
-                            <a class="footer__link" href="#">Blog</a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="footer__holder">
+                    <h3 class="footer__column-title">Menu</h3>
+                    <svg class="footer__icon">
+                        <use xlink:href="images/sprite.svg#chevron-right"></use>
+                    </svg>
+                </div>
+                <ul class="footer__list footer__list--slide">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Home</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">About</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Tours</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Packages</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Blog</a>
+                    </li>
+                </ul>
             </li>
         </ul>
         <div class="footer__bottom">
             <p class="footer__copy">&copy; 2018 Roy Design. All Rights Reserved </p>
-            <ul class="footer__list--bottom">
+            <ul class="footer__list--bottom animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-offset="0">
                 <li class="footer__item">
                     <a class="footer__link" href="#">About Hoststar</a>
                 </li>

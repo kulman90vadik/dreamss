@@ -4,6 +4,9 @@
     &__item {
         &:not(:last-child) {
             margin-right: 25px;
+            @include max($s) {
+                margin-right: 10px;
+            }
         }
     }
     &__link {
