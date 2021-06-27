@@ -165,10 +165,6 @@
                     @include max($lg) {
                         margin-right: 10px;
                     }
-                    @include max($sm) {
-                        margin-right: 0;
-                        border-right: 1px solid $gold;
-                    }
                 }
             }
             & .footer__link {
@@ -184,10 +180,9 @@
                 &:active {
                     color: #fff;
                 }
-                @include max($sm) {
-                    padding: 0 5px;
-                    text-align: center;
-                }
+            }
+            @include max($sm) {
+                display: none;
             }
         }     
     }
