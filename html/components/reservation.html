@@ -1,0 +1,80 @@
+<section class="reservation">
+    <h2 class="visually-hidden">
+        Booking tickets
+    </h2>
+    <div class="container">
+        <ul class="reservation__buttons">
+            <li class="reservation__item">
+                <button class="reservation__btn" type="button" data-filter=".hotel">Hotel</button>
+            </li>
+            <li class="reservation__item">
+                <button class="reservation__btn" type="button" data-filter=".tours">Tours</button>
+            </li>
+            <li class="reservation__item">
+                <button class="reservation__btn" type="button" data-filter=".package">Package</button>
+            </li>
+        </ul>
+        <div class="reservation__inner">
+
+            <form class="reservation__list mix hotel" action="#">
+                <div class="reservation__items">
+                    <label class="reservation__label" for="location">where?</label>
+                    <input class="reservation__input" type="text" name="location" id="location" placeholder="Choose location" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="city">which?</label>
+                    <input class="reservation__input" type="text" name="city" id="city" placeholder="Choose City" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="check-in">Check in</label>
+                    <input  class="reservation__input reservation__input--datepicker1" type="text" name="check-in" id="check-in" placeholder="yy-dd-mm" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="check-out">Check out</label>
+                    <input class="reservation__input reservation__input--datepicker2" type="text" name="check-out" id="check-out" placeholder="yy-dd-mm" required>
+                </div>
+                <button class="reservation__button" type="submit">Search</button>
+            </form>
+            <form class="reservation__list mix tours" action="#">
+                <div class="reservation__items">
+                    <label class="reservation__label" for="location">where?</label>
+                    <input class="reservation__input" type="text" name="location" id="location" placeholder="Choose location" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="city">which?</label>
+                    <input class="reservation__input" type="text" name="city" id="city" placeholder="Choose City" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="check-in">Check in</label>
+                    <input  class="reservation__input reservation__input--datepicker1" type="text" name="check-in" id="check-in" placeholder="yy-dd-mm" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="check-out">Check out</label>
+                    <input class="reservation__input reservation__input--datepicker2" type="text" name="check-out" id="check-out" placeholder="yy-dd-mm" required>
+                </div>
+                <button class="reservation__button" type="submit">Search</button>
+            </form>
+            <form class="reservation__list mix package" action="#">
+                <div class="reservation__items">
+                    <label class="reservation__label" for="location">where?</label>
+                    <input class="reservation__input" type="text" name="location" id="location" placeholder="Choose location" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="city">which?</label>
+                    <input class="reservation__input" type="text" name="city" id="city" placeholder="Choose City" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="check-in">Check in</label>
+                    <input  class="reservation__input reservation__input--datepicker1" type="text" name="check-in" id="check-in" placeholder="yy-dd-mm" required>
+                </div>
+                <div class="reservation__items">
+                    <label class="reservation__label" for="check-out">Check out</label>
+                    <input class="reservation__input reservation__input--datepicker2" type="text" name="check-out" id="check-out" placeholder="yy-dd-mm" required>
+                </div>
+                <button class="reservation__button" type="submit">Search</button>
+            </form>
+
+        </div>
+    </div>
+</section>
+

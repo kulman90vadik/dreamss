@@ -1,0 +1,27 @@
+<div class="login" id="hidden">
+    <form class="login__form">
+        <label class="login__label" for="ru">Username or email address *</label>
+        <span class="visually-hidden">
+            text field where you need to enter your email
+        </span>
+        <input class="login__input login__input--email" id="ru" name="email" type="email" required>
+        <label class="login__label" for="password">Password *</label>
+        <span class="visually-hidden">
+            text field where you need to enter your password
+        </span>
+        <input class="login__input login__input--password" id="password" name="password" type="password" required>
+        <button class="login__btn" type="submit">Login</button>
+        <div class="login__inner">
+            <label class="login__checkbox">
+                <input class="login__check" type="checkbox" name="checkbox">
+                <span class="login__checked"></span>
+                Remember me
+                <span class="visually-hidden">
+                    a field where you need to put your consent in order to remember your data
+                </span>
+            </label>
+            <a class="login__link" href="#">Lost your password?</a>
+        </div>
+        <a class="login__registered" href="#">Create an account</a>
+    </form>    
+</div>
