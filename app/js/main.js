@@ -1,14 +1,9 @@
 $(function(){
 
-
-    
     $('.header__btn').on('click', function(){
         $('.menu').toggleClass('menu--active');
         $('.header__btn-line').toggleClass('header__btn-line--active');
-        // $('.header__top').toggleClass('header__top--hidden');
     });
-
-
 
     $('.reservation__input--datepicker1').datetimepicker({
         format:'Y.d.m',
@@ -167,12 +162,6 @@ $(function(){
 
         }
     });
-
-
-
-
-
-
 
     var mixer = mixitup('.reservation__inner');
     mixer.filter('.hotel');
